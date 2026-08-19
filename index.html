@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cynthia & Michael - Destination Wedding</title>
+    <!-- Importing elegant fonts from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Base Styles & Color Palette */
+        :root {
+            --bg-color: #F8F6F0; /* Soft cream background */
+            --text-main: #333333;
+            --text-accent: #6C5454; /* Muted burgundy/brown */
+            --font-heading: 'Cinzel', serif;
+            --font-body: 'Lato', sans-serif;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: var(--font-body);
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3 {
+            font-family: var(--font-heading);
+            color: var(--text-accent);
+            font-weight: 400;
+        }
+
+        /* Navigation */
+        header {
+            padding: 30px 20px;
+            text-align: center;
+        }
+        
+        .logo {
+            font-family: var(--font-heading);
+            font-size: 28px;
+            color: var(--text-accent);
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-accent);
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #000;
+        }
+
+        /* Hero Section */
+        .hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 50px;
+            padding: 0 20px;
+            position: relative;
+        }
+
+        .hero-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+            max-width: 1000px;
+            width: 100%;
+        }
+
+        .name {
+            flex: 1;
+            font-family: var(--font-heading);
+            font-size: 2.5rem;
+            color: var(--text-accent);
+            text-align: center;
+            line-height: 1.2;
+            letter-spacing: 2px;
+        }
+
+        .arch-container {
+            position: relative;
+            width: 350px;
+            height: 450px;
+            flex-shrink: 0;
+        }
+
+        .arch-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            /* This creates the arch effect */
+            border-radius: 175px 175px 0 0; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .ampersand {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: var(--font-heading);
+            font-size: 5rem;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            z-index: 2;
+        }
+
+        .date {
+            margin-top: 40px;
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            color: var(--text-accent);
+            letter-spacing: 4px;
+            padding: 10px 0;
+            border-top: 1px solid var(--text-accent);
+            border-bottom: 1px solid var(--text-accent);
+        }
+
+        /* Decorative curved line behind hero */
+        .bg-curve {
+            position: absolute;
+            top: 30%;
+            left: -10%;
+            width: 120%;
+            height: 200px;
+            border-top: 1px solid rgba(108, 84, 84, 0.2);
+            border-radius: 50%;
+            z-index: -1;
+        }
+
+        /* Content Sections */
+        .section {
+            max-width: 800px;
+            margin: 80px auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        .section h2 {
+            font-size: 2rem;
+            margin-bottom: 30px;
+            letter-spacing: 2px;
+        }
+
+        .section p {
+            line-height: 1.8;
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        /* RSVP Form (Visual Only) */
+        .rsvp-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .rsvp-form input {
+            padding: 15px;
+            border: 1px solid #ccc;
+            background: transparent;
+            font-family: var(--font-body);
+            font-size: 16px;
+        }
+
+        .rsvp-form button {
+            padding: 15px;
+            background-color: var(--text-accent);
+            color: white;
+            border: none;
+            font-family: var(--font-heading);
+            font-size: 16px;
+            letter-spacing: 2px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .rsvp-form button:hover {
+            background-color: #4a3838;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-content {
+                flex-direction: column;
+                gap: 20px;
+            }
+            .arch-container {
+                width: 280px;
+                height: 380px;
+            }
+            .name {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">C & M</div>
+        <nav>
+            <a href="#about">About Us</a>
+            <a href="#itinerary">Wedding Itinerary</a>
+            <a href="#accommodations">Accommodations</a>
+            <a href="#dress-code">Ceremony Dress Code</a>
+            <a href="#rsvp">RSVP</a>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <div class="bg-curve"></div>
+        <div class="hero-content">
+            <div class="name">CYNTHIA<br>DONAHUE</div>
+            <div class="arch-container">
+                <span class="ampersand">&</span>
+                <!-- Replace this URL with your own image -->
+                <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80" alt="Sunset Beach" class="arch-image">
+            </div>
+            <div class="name">MICHAEL<br>ORTU</div>
+        </div>
+        <div class="date">04 . 20 . 2027</div>
+    </div>
+
+    <section id="about" class="section">
+        <h2>ABOUT US</h2>
+        <p><em>"Timing is everything. If it’s meant to be, it will happen at the right time, with the right person, and for the right reason."</em></p>
+        <p>For more than ten years, our paths didn’t just cross—they looped, swung, and echoed around one another like two planets sharing the exact same orbit. We were always almost there.</p>
+        <p>The universe kept us close enough to feel the atmospheric pull of one another, but always held a gentle hand between us. We weren't ready yet...</p>
+    </section>
+
+    <section id="itinerary" class="section">
+        <h2>WEDDING ITINERARY</h2>
+        <h3>Tuesday: The Wedding Day</h3>
+        <p><strong>4:00 PM: Beachside Ceremony</strong><br>The moment we've been waiting for! Join us on the sand as we exchange our vows with the ocean behind us.</p>
+        <p><strong>Post-Ceremony: Beachside Cocktails</strong><br>Immediately following the ceremony, raise a glass with us during a sunset cocktail hour right by the water.</p>
+    </section>
+
+    <section id="dress-code" class="section">
+        <h2>CEREMONY DRESS CODE</h2>
+        <h3>Coastal All-White</h3>
+        <p>We can't wait to celebrate with our toes in the sand! To create a crisp, cohesive look against the ocean and sunset, we kindly ask that all guests wear beach-friendly attire in shades of white. Think airy, elevated, and comfortable for a coastal evening.</p>
+    </section>
+
+    <section id="rsvp" class="section">
+        <h2>FIND YOUR RSVP</h2>
+        <p>Enter your first name and last name below to open or update your personal RSVP.</p>
+        <form class="rsvp-form" onsubmit="event.preventDefault(); alert('This is a demo template! You can connect this form to a service like Formspree.');">
+            <input type="text" placeholder="First Name" required>
+            <input type="text" placeholder="Last Name" required>
+            <button type="submit">FIND MY RSVP</button>
+        </form>
+    </section>
+
+</body>
+</html>
